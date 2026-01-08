@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeanStore - Premium Subscription Services</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Popup Promo CSS -->
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-store"></i> JeanStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricelist">Pricelist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimoni">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="hero-title">
+                    Welcome to <span class="highlight">JeanStore</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Premium Subscription Services dengan Harga Terjangkau
+                </p>
+                <p class="hero-description">
+                    Dapatkan akses ke berbagai platform streaming, editing, dan produktivitas dengan harga yang
+                    ramah di kantong!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#pricelist" class="btn btn-primary btn-lg me-3 mb-3">
+                        <i class="fas fa-list"></i> Lihat Pricelist
+                    </a>
+                    <a href="#testimoni" class="btn btn-testimonial btn-lg me-3 mb-3">
+                        <i class="fas fa-star"></i> See Reviews
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg mb-3">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wave-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#000000" fill-opacity="1"
+                d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">
+                        Kenapa Pilih <span class="highlight">JeanStore</span>?
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Terpercaya</h4>
+                        <p>Pelayanan terbaik dengan garansi kepuasan pelanggan</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h4>Harga Terjangkau</h4>
+                        <p>Nikmati layanan premium dengan harga yang ramah di kantong</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Fast Response</h4>
+                        <p>Respon cepat dan pelayanan 24/7 untuk kenyamanan Anda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricelist Section -->
+    <section id="pricelist" class="pricelist-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">
+                        Our <span class="highlight">Pricelist</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Pilih paket yang sesuai dengan kebutuhan Anda
+                    </p>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Services</button>
+                        <button class="filter-btn" data-filter="streaming">Streaming</button>
+                        <button class="filter-btn" data-filter="editing">Editing</button>
+                        <button class="filter-btn" data-filter="other">Other</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="pricelistContainer">
+
+                <!-- Netflix -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>Netflix</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔒 Private (1 Profile – 1 User)</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Day:</span> <strong>Rp 4.000</strong></li>
+                                    <li><span>2 Day:</span> <strong>Rp 5.000</strong></li>
+                                    <li><span>3 Day:</span> <strong>Rp 7.000</strong></li>
+                                    <li><span>7 Day:</span> <strong>Rp 12.000</strong></li>
+                                    <li><span>1 Month:</span> <strong>Rp 35.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔓 Sharing (1 Profile – 2 User)</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Day:</span> <strong>Rp 3.000</strong></li>
+                                    <li><span>2 Day:</span> <strong>Rp 4.000</strong></li>
+                                    <li><span>3 Day:</span> <strong>Rp 6.000</strong></li>
+                                    <li><span>7 Day:</span> <strong>Rp 10.000</strong></li>
+                                    <li><span>1 Month:</span> <strong>Rp 22.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOKLOK -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>LOKLOK</h3>
+                            <span class="badge">Mobile Only</span>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing Basic</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 22.000</strong></li>
+                                </ul>
+                                <p class="price-note">Exclude short drama</p>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOVIEBOX -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>MOVIEBOX</h3>
+                            <span class="badge">Android Only</span>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BSTATION -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>BSTATION</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 9.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AMAZON PRIME -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">📺</div>
+                            <h3>Amazon Prime</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔒 Private</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 18.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IQIYI -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">📺</div>
+                            <h3>IQIYI</h3>
+                            <span class="badge">Mobile Device Only</span>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing STD</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔓 Sharing Premium</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 15.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIU -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">📺</div>
+                            <h3>VIU</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>Private Account</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 5.000</strong></li>
+                                    <li><span>3 Month:</span> <strong>Rp 8.000</strong></li>
+                                    <li><span>1 Year:</span> <strong>Rp 15.000</strong></li>
+                                    <li><span>Lifetime:</span> <strong>Rp 20.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YOUTUBE PREMIUM -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">▶️</div>
+                            <h3>YouTube Premium</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>Family Plan</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 5.000</strong></li>
+                                    <li><span>2 Month:</span> <strong>Rp 9.000</strong></li>
+                                </ul>
+                                <p class="price-note">Akun dari buyer</p>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APPLE MUSIC -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="other">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎵</div>
+                            <h3>Apple Music</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 12.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DRAKOR.ID -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="streaming">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>DRAKOR.ID</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CANVA -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="editing">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎨</div>
+                            <h3>Canva</h3>
+                            <span class="badge">Include Designer</span>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <ul class="price-list">
+                                    <li><span>1 Day:</span> <strong>Rp 2.000</strong></li>
+                                    <li><span>2 Day:</span> <strong>Rp 3.000</strong></li>
+                                    <li><span>3 Day:</span> <strong>Rp 4.000</strong></li>
+                                    <li><span>7 Day:</span> <strong>Rp 7.000</strong></li>
+                                    <li><span>1 Month:</span> <strong>Rp 15.000</strong></li>
+                                    <li><span>2 Month:</span> <strong>Rp 25.000</strong></li>
+                                    <li><span>3 Month:</span> <strong>Rp 40.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAPCUT -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="editing">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎥</div>
+                            <h3>CapCut</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing (2-3 User)</h5>
+                                <ul class="price-list">
+                                    <li><span>7 Day:</span> <strong>Rp 3.000</strong></li>
+                                    <li><span>14 Day:</span> <strong>Rp 6.000</strong></li>
+                                    <li><span>1 Month:</span> <strong>Rp 9.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔒 Private</h5>
+                                <ul class="price-list">
+                                    <li><span>7 Day:</span> <strong>Rp 6.000</strong></li>
+                                    <li><span>14 Day:</span> <strong>Rp 10.000</strong></li>
+                                    <li><span>1 Month:</span> <strong>Rp 18.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALIGHT MOTION -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="editing">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎬</div>
+                            <h3>Alight Motion</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 6.000</strong></li>
+                                    <li><span>2 Month:</span> <strong>Rp 9.000</strong></li>
+                                    <li><span>1 Year:</span> <strong>Rp 15.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔒 Private</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 9.000</strong></li>
+                                    <li><span>1 Year:</span> <strong>Rp 18.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAMSCANNER -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="other">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">📄</div>
+                            <h3>CamScanner</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 15.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔒 Private</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 30.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PICSART -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="editing">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🎨</div>
+                            <h3>PicsArt</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHATGPT -->
+                <div class="col-lg-4 col-md-6 price-item" data-category="other">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <div class="price-icon">🤖</div>
+                            <h3>ChatGPT</h3>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-type">
+                                <h5>🔓 Sharing (5 User)</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 10.000</strong></li>
+                                </ul>
+                            </div>
+                            <div class="price-type mt-3">
+                                <h5>🔒 Private</h5>
+                                <ul class="price-list">
+                                    <li><span>1 Month:</span> <strong>Rp 50.000</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#contact" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="testimoni-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">
+                        Customer <span class="highlight">Testimonials</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">
+                        Apa kata mereka tentang JeanStore?
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni1.jpg" alt="Testimoni 1">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni2.jpg" alt="Testimoni 2">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni3.jpg" alt="Testimoni 3">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni4.jpg" alt="Testimoni 4">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni5.jpg" alt="Testimoni 5">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimoni-card">
+                        <div class="testimoni-image">
+                            <img src="images/testimoni6.jpg" alt="Testimoni 6">
+                        </div>
+                        <div class="testimoni-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </sectionLanjutkan15.09 <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">
+                            Get in <span class="highlight">Touch</span>
+                        </h2>
+                        <div class="title-underline"></div>
+                        <p class="section-subtitle">
+                            Hubungi kami untuk order atau informasi lebih lanjut
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contact-card">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <a href="https://wa.me/62882007641341" target="_blank" class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <div class="contact-info">
+                                            <h5>WhatsApp</h5>
+                                            <p>+62 882-0076-41341</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="https://twitter.com/earthjz" target="_blank" class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="contact-info">
+                                            <h5>Twitter / X</h5>
+                                            <p>@earthjz</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact-cta">
+                                <h4>Ready to Order?</h4>
+                                <p>Chat kami sekarang dan dapatkan layanan terbaik!</p>
+                                <a href="https://wa.me/62882007641341?text=halo%20kak,%20mau%20order%F0%9F%99%8C%F0%9F%8F%BB" target="_blank" class="btn btn-primary btn-lg">
+                                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="footer-brand">
+                            <i class="fas fa-store"></i>
+                            <h3>JeanStore</h3>
+                        </div>
+                        <p class="footer-text">
+                            Premium Subscription Services dengan Harga Terjangkau
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://wa.me/62882007641341?text=halo%20kak,%20mau%20order%F0%9F%99%8C%F0%9F%8F%BB" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://twitter.com/earthjz" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <p class="footer-copyright">
+                            © 2025 JeanStore. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollTopBtn" class="scroll-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modalImage" src="" alt="Testimoni" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="script.js"></script>
+
+        <!-- Popup Promo JS -->
+        <script src="popup.js"></script>
+
+</body>
+
+</html>
