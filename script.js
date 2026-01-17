@@ -30,12 +30,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== PRICELIST FILTER ==========
+// ========== PRICELIST FILTER & SEARCH ==========
+// Declare variables once at the top
 const filterButtons = document.querySelectorAll('.filter-btn');
 const priceItems = document.querySelectorAll('.price-item');
+const searchInput = document.getElementById('searchInput');
+const clearSearch = document.getElementById('clearSearch');
+const searchResultInfo = document.getElementById('searchResultInfo');
 
+// ========== FILTER FUNCTIONALITY ==========
 filterButtons.forEach(button => {
     button.addEventListener('click', function() {
+        // If there's active search, clear it first
+        if (searchInput && searchInput.value.trim() !== '') {
+            clearSearchInput();
+        }
+
         // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
         
@@ -71,6 +81,146 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+// ========== SEARCH FUNCTIONALITY ==========
+if (searchInput) {
+    // Search function
+    function searchPricelist() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+        let noResultsDiv = document.getElementById('noResultsMessage');
+
+        // Show/hide clear button
+        if (searchTerm.length > 0) {
+            clearSearch.style.display = 'flex';
+        } else {
+            clearSearch.style.display = 'none';
+        }
+
+        // If search is empty, show all items based on current filter
+        if (searchTerm === '') {
+            searchResultInfo.textContent = '';
+            searchResultInfo.classList.remove('active');
+            
+            // Remove no results message if exists
+            if (noResultsDiv) {
+                noResultsDiv.remove();
+            }
+
+            // Show items based on active filter
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            priceItems.forEach(item => {
+                if (activeFilter === 'all' || item.getAttribute('data-category') === activeFilter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            return;
+        }
+
+        // Search through items
+        priceItems.forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const category = item.getAttribute('data-category').toLowerCase();
+            
+            if (title.includes(searchTerm) || category.includes(searchTerm)) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+                item.classList.add('search-highlight');
+                setTimeout(() => {
+                    item.classList.remove('search-highlight');
+                }, 500);
+                visibleCount++;
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Update result info
+        if (visibleCount > 0) {
+            searchResultInfo.textContent = `Ditemukan ${visibleCount} layanan untuk "${searchTerm}"`;
+            searchResultInfo.classList.add('active');
+            
+            // Remove no results message if exists
+            if (noResultsDiv) {
+                noResultsDiv.remove();
+            }
+        } else {
+            searchResultInfo.textContent = `Tidak ada hasil untuk "${searchTerm}"`;
+            searchResultInfo.classList.add('active');
+            
+            // Show no results message
+            if (!noResultsDiv) {
+                const container = document.getElementById('pricelistContainer');
+                noResultsDiv = document.createElement('div');
+                noResultsDiv.id = 'noResultsMessage';
+                noResultsDiv.className = 'col-12 no-results-message';
+                noResultsDiv.innerHTML = `
+                    <i class="fas fa-search"></i>
+                    <p>Maaf, layanan "${searchTerm}" tidak ditemukan.</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Coba kata kunci lain atau hubungi admin untuk info lebih lanjut.</p>
+                `;
+                container.appendChild(noResultsDiv);
+            }
+        }
+
+        // Reset filter buttons when searching
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelector('[data-filter="all"]').classList.add('active');
+    }
+
+    // Clear search
+    function clearSearchInput() {
+        searchInput.value = '';
+        clearSearch.style.display = 'none';
+        searchResultInfo.textContent = '';
+        searchResultInfo.classList.remove('active');
+        
+        // Remove no results message if exists
+        const noResultsDiv = document.getElementById('noResultsMessage');
+        if (noResultsDiv) {
+            noResultsDiv.remove();
+        }
+
+        // Show all items based on active filter
+        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        priceItems.forEach(item => {
+            if (activeFilter === 'all' || item.getAttribute('data-category') === activeFilter) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            }
+        });
+
+        searchInput.focus();
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', searchPricelist);
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Escape') {
+            clearSearchInput();
+        }
+    });
+    clearSearch.addEventListener('click', clearSearchInput);
+
+    // Make clearSearchInput available globally for filter buttons
+    window.clearSearchInput = clearSearchInput;
+}
 
 // ========== TESTIMONI IMAGE MODAL ==========
 const testimoniCards = document.querySelectorAll('.testimoni-card');
@@ -162,3 +312,4 @@ window.addEventListener('load', function() {
         document.body.style.opacity = '1';
     }, 100);
 });
+
